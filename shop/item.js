@@ -2,6 +2,8 @@ const json_bin = "https://api.npoint.io/7de8cd42317a93c47a99"
 
 let cart = JSON.parse(localStorage.getItem("cart_cache"))
 
+if (cart == null) cart = []
+
 const sku = document.getElementById("sku").innerText.replace(/\D/g,'');
 
 let record = null
