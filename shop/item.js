@@ -4,7 +4,7 @@ let cart = JSON.parse(localStorage.getItem("cart_cache"))
 
 const sku = document.getElementById("sku").innerText.replace(/\D/g,'');
 
-let dta = null
+let record = null
 
 fetch("https://api.jsonbin.io/v3/qs/67bf5ecde41b4d34e49d3c36")
   .then(res => res.json())
@@ -12,6 +12,8 @@ fetch("https://api.jsonbin.io/v3/qs/67bf5ecde41b4d34e49d3c36")
 
 function data(dta) {
     console.log("dta", dta)
+    record = dta
+    console.log("Record", record)
 }
 
 
