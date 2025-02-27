@@ -85,7 +85,7 @@ function quantity() {
 fetch("https://api.npoint.io/7de8cd42317a93c47a99")
   .then((response) => response.json())
   .then((data) => {
-    renderAll(data.record)
+    renderAll(data)
   })
   .catch((error) => console.error("Error loading JSON file", error));
 

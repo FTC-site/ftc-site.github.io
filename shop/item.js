@@ -12,7 +12,7 @@ fetch("https://api.npoint.io/7de8cd42317a93c47a99")
 
 function data(dta) {
     console.log("dta", dta)
-    record = dta.record
+    record = dta
     console.log("Record", record)
 }
 
