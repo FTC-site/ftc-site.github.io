@@ -18,10 +18,9 @@ function data(dta) {
     console.log("Record", record)
 }
 
-
 function sku_item(sku) {
     let exist = cart.filter(_item => sku == _item.sku)
-    return dta.record[exist]
+    return record[exist]
 }
 
 function cart_add_sku() {
