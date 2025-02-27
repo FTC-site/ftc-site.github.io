@@ -19,17 +19,17 @@ function data(dta) {
 }
 
 function sku_item(sku) {
-    let exist = cart.filter(_item => sku == _item.sku)
+    let exist = cart.map(item => item.sku).indexOf(sku) 
     return record[exist]
 }
 
 function cart_add_sku() {
-    console.log(sku)
     let item = sku_item(sku)
+    console.log("item", item)
     if (cart.length == 0) 
         cart.push(item)
     else { 
-        let exist = cart.filter(_item => sku == _item.sku)
+        let exist = cart.filter
         if (exist.length != 0) {
             cart.find(_item =>  _item.quantity += 1)
         } else {
