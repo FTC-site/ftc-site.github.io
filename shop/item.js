@@ -19,7 +19,7 @@ function data(dta) {
 }
 
 function sku_item(sku) {
-    let exist = cart.map(item => item.sku).indexOf(sku) 
+    let exist = record.map(item => item.sku).indexOf(sku) 
     return record[exist]
 }
 

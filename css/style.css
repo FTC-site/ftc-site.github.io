@@ -235,10 +235,6 @@ footer li {
 
 }
 
-.nav_header > div > ul > li > a {
-    text-decoration: none;
-}
-
 .nav_header :first-child {
     margin-left: 10px;
 }
