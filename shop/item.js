@@ -1,4 +1,4 @@
-const json_bin = "https://api.jsonbin.io/v3/qs/67bf5ecde41b4d34e49d3c36"
+const json_bin = "https://api.npoint.io/7de8cd42317a93c47a99"
 
 let cart = JSON.parse(localStorage.getItem("cart_cache"))
 
@@ -6,23 +6,25 @@ const sku = document.getElementById("sku").innerText.replace(/\D/g,'');
 
 let record = null
 
-fetch("https://api.jsonbin.io/v3/qs/67bf5ecde41b4d34e49d3c36")
+fetch("https://api.npoint.io/7de8cd42317a93c47a99")
   .then(res => res.json())
   .then(dta => data(dta))
 
 function data(dta) {
     console.log("dta", dta)
-    record = dta
+    record = dta.record
     console.log("Record", record)
 }
 
 
 function item(sku) {
-    data.forEach(_item => console.log(_item))
+    let exist = cart.filter(_item => sku == _item.sku)
+    return dta.record[exist]
 }
 
 function cart_add_sku() {
     console.log(sku)
+    let item = item(sku)
     if (cart.length == 0) 
         cart.push(item)
     else { 
