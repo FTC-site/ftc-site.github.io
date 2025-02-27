@@ -204,7 +204,7 @@ footer li {
 .item-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #000000;
+    border: transparent;
     height: 100%;
     justify-content: space-between;
 }
@@ -233,6 +233,10 @@ footer li {
     font-weight: 500;
     padding: 10px;
 
+}
+
+.nav_header > div > ul > li > a {
+    text-decoration: none;
 }
 
 .nav_header :first-child {
@@ -399,9 +403,18 @@ footer li {
 }
 
 #shop {
+    border-bottom: 1px solid #000000;
     display: grid;
-    gap: 10px;
+    gap: 50px;
     grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+@media (max-width: 650px) {
+    #shop {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 #shop > div {
