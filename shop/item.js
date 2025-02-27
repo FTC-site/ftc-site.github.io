@@ -17,14 +17,14 @@ function data(dta) {
 }
 
 
-function item(sku) {
+function sku_item(sku) {
     let exist = cart.filter(_item => sku == _item.sku)
     return dta.record[exist]
 }
 
 function cart_add_sku() {
     console.log(sku)
-    let item = item(sku)
+    let item = sku_item(sku)
     if (cart.length == 0) 
         cart.push(item)
     else { 
